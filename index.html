@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Components Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+</head>
+<body>
+    <main>
+        <ul>
+            <li class="nav-item">Home</li>
+            <li class="nav-item">User</li>
+            <li class="nav-item">Portfolio</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odit nisi nobis? Vitae commodi repudiandae, itaque repellendus, accusamus id ducimus ipsam sunt ratione neque delectus nam porro ipsum tenetur veniam.At accusantium cupiditate ipsum perspiciatis. Iste velit saepe, ipsa illum dolor iusto ipsam at similique sequi a praesentium et eius, aperiam ut, nesciunt reiciendis? Unde dolore qui quos autem dolorem.
+            
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odit nisi nobis? Vitae commodi repudiandae, itaque repellendus, accusamus id ducimus ipsam sunt ratione neque delectus nam porro ipsum tenetur veniam.At accusantium cupiditate ipsum perspiciatis. Iste velit saepe, ipsa illum dolor iusto ipsam at similique sequi a praesentium et eius, aperiam ut, nesciunt reiciendis? Unde dolore qui quos autem dolorem.
+        </article>
+        <div id="app">
+            <user first_name="Deep" last_name="Panchal" role="all-around awesomeness" @log-event="logEVENTFunction"></user>
+            <user first_name="Panchal" last_name="Deep" role="Being Good Guy" @log-event="logEVENTFunction"></user>
+        </div>
+    </main>
+    <!-- Templates -->
+    <template id="activeuser">
+        <div>
+            <h3>{{ role }}</h3>
+            <p>{{ first_name }} {{ last_name }}</p>
+            <button v-on:click="logName">Get Log</button>
+            <button v-on:click="shootEvent">EventSet</button>
+            <hr>
+        </div>
+    </template>
+    <script src="js/main.js"></script>
+</body>
+</html>
